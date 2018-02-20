@@ -1,6 +1,9 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
+const fs =require( 'fs');
+const os =require( 'os');
+const path = require('path');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -16,16 +19,12 @@ function activate(context) {
     let disposable = vscode.commands.registerCommand('extension.sendBuildCommand', function () {
         // The code you place here will be executed every time your command is executed
 
-        vscode.window.showInformationMessage('Ran builder: ', "Ok");
+        const tempDir = os.tmpdir();
+        const tempFilename = "Start.txt";
+        let fullname = tempDir + path.sep + tempFilename;
 
-        var tmp = require('tmp');
-
-        tmp.file({ prefix: 'Start', postfix: '.txt' }, function _tempFileCreated(err, path, fd) {
-            if (err) console.log(err);
-            if (err) throw err;
-            vscode.window.showInformationMessage('Created temporary filename: ', path);
-        });
-
+       fs.writeFile(fullname,'Go');
+       vscode.window.showInformationMessage('Created build signal: ');
     });
 
     context.subscriptions.push(disposable);
