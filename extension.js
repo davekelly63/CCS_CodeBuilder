@@ -16,9 +16,12 @@ function activate(context) {
     let disposable = vscode.commands.registerCommand('extension.sendBuildCommand', function () {
         // The code you place here will be executed every time your command is executed
 
+        vscode.window.showInformationMessage('Ran builder: ', "Ok");
+
         var tmp = require('tmp');
 
         tmp.file({ prefix: 'Start', postfix: '.txt' }, function _tempFileCreated(err, path, fd) {
+            if (err) console.log(err);
             if (err) throw err;
             vscode.window.showInformationMessage('Created temporary filename: ', path);
         });
