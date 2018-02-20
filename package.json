@@ -1,0 +1,36 @@
+{
+    "name": "ccs-builder",
+    "displayName": "ccs_builder",
+    "description": "Compile CCS project using CCS compiler, and DKSS builder",
+    "version": "0.0.1",
+    "publisher": "DKSS",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.sendBuildCommand"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sendBuildCommand",
+                "title": "CCS Build"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
