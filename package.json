@@ -32,7 +32,14 @@
                     "description": "Show the info message after build command created"
                 }
             }
-        }
+        },
+        "keybindings": [
+            {
+                "command": "extension.sendBuildCommand",
+                "key": "ctrl+shift+b",
+                "when": "editorTextFocus"
+            }
+        ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
