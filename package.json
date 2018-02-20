@@ -1,8 +1,8 @@
 {
     "name": "ccs-builder",
     "displayName": "CCS Builder",
-    "description": "Compile CCS project using CCS compiler, and DKSS builder",
-    "version": "0.0.1",
+    "description": "Compile CCS project using CCS C compiler, and DKSS builder",
+    "version": "0.0.2",
     "publisher": "DKSS",
     "icon": "images/ccs-builder.ico",
     "engines": {
@@ -21,7 +21,18 @@
                 "command": "extension.sendBuildCommand",
                 "title": "CCS Build"
             }
-        ]
+        ],
+        "configuration": {
+            "type":"object",
+            "title": "CCS Builder Configuration",
+            "properties":{
+                "CCS.showBuildMessage":{
+                    "type":"boolean",
+                    "default":true,
+                    "description": "Show the info message after build command created"
+                }
+            }
+        }
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",

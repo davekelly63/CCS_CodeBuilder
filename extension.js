@@ -19,12 +19,17 @@ function activate(context) {
     let disposable = vscode.commands.registerCommand('extension.sendBuildCommand', function () {
         // The code you place here will be executed every time your command is executed
 
+        console.log('Running CCS builder');
         const tempDir = os.tmpdir();
         const tempFilename = "Start.txt";
         let fullname = tempDir + path.sep + tempFilename;
 
        fs.writeFile(fullname,'Go');
+
+       if ((vscode.workspace.getConfiguration('CCS').showBuildMessage) === true){
+
        vscode.window.showInformationMessage('Created build signal: ');
+       }
     });
 
     context.subscriptions.push(disposable);
