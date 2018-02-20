@@ -1,9 +1,10 @@
 {
     "name": "ccs-builder",
-    "displayName": "ccs_builder",
+    "displayName": "CCS Builder",
     "description": "Compile CCS project using CCS compiler, and DKSS builder",
     "version": "0.0.1",
     "publisher": "DKSS",
+    "icon": "images/ccs-builder.ico",
     "engines": {
         "vscode": "^1.20.0"
     },
