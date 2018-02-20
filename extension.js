@@ -28,7 +28,7 @@ function activate(context) {
 
        if ((vscode.workspace.getConfiguration('CCS').showBuildMessage) === true){
 
-       vscode.window.showInformationMessage('Created build signal: ');
+       vscode.window.showInformationMessage('Created build signal');
        }
     });
 
