@@ -2,7 +2,7 @@
     "name": "ccs-builder",
     "displayName": "CCS Builder",
     "description": "Compile CCS project using CCS C compiler, and DKSS builder",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "publisher": "DKSS",
     "icon": "images/ccs-builder.ico",
     "engines": {
