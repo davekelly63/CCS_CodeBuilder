@@ -33,6 +33,10 @@ Initial release of CCS Builder
 Added config setting
 Added key binding
 
-# Contact Us
+# Future Plans
 
-If you run into any issues or have suggestions, please raise issues on the [Github page](https://github.com/davekelly63/CCS_CodeBuilder)
+Capture compiler output and send back to VS Code
+
+# Contact
+
+If you run into any issues or have suggestions, please raise issues on the [Github page](https://github.com/davekelly63/CCS_CodeBuilder/Issues)
