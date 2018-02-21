@@ -14,7 +14,7 @@ While editor is active, press Ctrl-Shift-b
 
 ## Requirements
 
-DKSS CCS builder must be installed, and running.
+If DKSS CCS Builder is not installed, it will install first time running.
 
 ## Extension Settings
 
