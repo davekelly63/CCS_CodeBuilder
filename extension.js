@@ -53,7 +53,14 @@ function runCompiler() {
     const filename = vscode.workspace.getConfiguration('CCS').exePath
 
     try {
-        process.exec(filename);
+        const compileProcess = process.spawn(filename, {
+            detached: true,
+            stdio: 'ignore'
+        });
+        console.log(compileProcess);
+
+        compileProcess.unref();
+        console.log('Finished build function');
     } catch (err) {
         console.log(err);
     }
