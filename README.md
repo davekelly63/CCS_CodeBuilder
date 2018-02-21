@@ -50,6 +50,10 @@ Added buuild tool path setting
 
 First release
 
+### 1.0.1
+
+Save files before build
+
 # Future Plans
 
 Capture compiler output and send back to VS Code

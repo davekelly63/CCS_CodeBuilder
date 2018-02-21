@@ -21,6 +21,9 @@ function activate(context) {
         // The code you place here will be executed every time your command is executed
 
         console.log('Running CCS builder');
+
+        vscode.workspace.saveAll(false);
+
         const tempDir = os.tmpdir();
         const tempFilename = "Start.txt";
         let fullname = tempDir + path.sep + tempFilename;
