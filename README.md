@@ -8,7 +8,7 @@ This provides a way of running the DKSS CCS builder application, so that it can 
 
 DKSS CCS Builder will build any specific CCS project. Use of this extension causes the build to take place, irrespective of open files.
 
-While editor is active, press Ctrl-Shift-b
+The external compiler tool can be run by either pressing Ctrl-Shift-b, or pressing F1 and search for CCS Build
 
 ![Screenshot](screenshots/Screenshot.png)
 
@@ -32,6 +32,10 @@ Initial release of CCS Builder
 
 Added config setting
 Added key binding
+
+### 0.0.3
+
+Can run the installer, and external tool so it does not need to be running previously
 
 # Future Plans
 
