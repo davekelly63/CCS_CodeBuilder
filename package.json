@@ -2,7 +2,7 @@
     "name": "ccs-builder",
     "displayName": "CCS Builder",
     "description": "Compile CCS project using CCS C compiler, and DKSS builder",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "DKSS",
     "icon": "images/ccs-builder.ico",
     "engines": {
@@ -25,11 +25,16 @@
         "configuration": {
             "type":"object",
             "title": "CCS Builder Configuration",
-            "properties":{
-                "CCS.showBuildMessage":{
+            "properties": {
+                "CCS.showBuildMessage": {
                     "type":"boolean",
-                    "default":true,
+                    "default":false,
                     "description": "Show the info message after build command created"
+                },
+                "CCS.exePath": {
+                    "type":"string",
+                    "default": "\\\\uk-fs\\Results\\Installers\\CCS_BuildTool\\setup.exe",
+                    "description": "Path to the executable for the CCS Build Tool."
                 }
             }
         },

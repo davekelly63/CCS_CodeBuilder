@@ -19,6 +19,7 @@ If DKSS CCS Builder is not installed, it will install first time running.
 ## Extension Settings
 
 * `CCS.showBuildMessage`: enable/disable showing message that signal was created
+* `CCS.exePath`: location of the executable to the CCS Buildtool. Normally it will point to the installer, so that updates will be automatic.
 
 ## Release Notes
 

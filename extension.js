@@ -33,7 +33,6 @@ function activate(context) {
         }
 
         runCompiler();
-
     });
 
     context.subscriptions.push(disposable);
@@ -48,7 +47,7 @@ exports.deactivate = deactivate;
 function runCompiler() {
     // Call the installer process, which should start the builder
 
-    const filename = '\\\\uk-fs\\Results\\Installers\\CCS_BuildTool\\setup.exe'
+    const filename = vscode.workspace.getConfiguration('CCS').exePath
 
     try {
         process.spawn(filename);
