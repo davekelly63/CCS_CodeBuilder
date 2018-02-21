@@ -53,7 +53,7 @@ function runCompiler() {
     const filename = vscode.workspace.getConfiguration('CCS').exePath
 
     try {
-        process.spawn(filename);
+        process.exec(filename);
     } catch (err) {
         console.log(err);
     }
