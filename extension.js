@@ -1,9 +1,10 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-const fs =require( 'fs');
-const os =require( 'os');
+const fs = require('fs');
+const os = require('os');
 const path = require('path');
+const process = require('child_process')
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -24,12 +25,15 @@ function activate(context) {
         const tempFilename = "Start.txt";
         let fullname = tempDir + path.sep + tempFilename;
 
-       fs.writeFile(fullname,'Go');
+        fs.writeFile(fullname,'Go');
 
-       if ((vscode.workspace.getConfiguration('CCS').showBuildMessage) === true){
+        if ((vscode.workspace.getConfiguration('CCS').showBuildMessage) === true) {
 
-       vscode.window.showInformationMessage('Created build signal');
-       }
+            vscode.window.showInformationMessage('Created build signal');
+        }
+
+        runCompiler();
+
     });
 
     context.subscriptions.push(disposable);
@@ -40,3 +44,16 @@ exports.activate = activate;
 function deactivate() {
 }
 exports.deactivate = deactivate;
+
+function runCompiler() {
+    // Call the installer process, which should start the builder
+
+    const filename = '\\\\uk-fs\\Results\\Installers\\CCS_BuildTool\\setup.exe'
+
+    try {
+        process.spawn(filename);
+    } catch (err) {
+        console.log(err);
+    }
+}
+exports.runCompiler = runCompiler;
